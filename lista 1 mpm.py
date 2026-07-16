@@ -119,3 +119,60 @@ print(total, "minutos equivalem a", horas, "horas e", minutos, "minutos")
 #a divisão com casas decimais, mostrando apenas uma casa decimal.
 #Você pode assumir que nunca será dado um valor nulo no denominador, ok?
 
+print("digite o primeiro valor inteiro:")
+x = int(input())
+print("digite o segundo valor intero:")
+y = int(input())
+
+soma = x + y
+print("a soma dos valoes é:", soma)
+sub = x - y 
+print("a subtração dos valores é:", sub)
+mult = x*y
+print("a multiplicação dos valores é:", mult)
+contador = y
+pot = 0
+while contador > 1:
+    pot += x*x
+    contador= contador - 1
+print(x, "elevado a", y, "é:", pot)
+divint = x//y
+print("a divisão inteira dos valores é:", divint)
+rest = x%y
+print("o resto da divisão dos valores é:", rest)
+div = x/y
+print("a divisão com uma casa decimal é:", '%.1f' % div)
+    
+
+#É fundamental nunca gastar mais do que você tem.
+# Dadas uma linha com o valor que você tem e outra o valor de um item que pode ser adquirido, calcule e mostre qual será valor restante caso a compra seja realizada.
+# Utilize
+# float() para ler o valor em reais com duas casas decimais
+# print('%.2f' % x) para imprimir o valor de x com duas casas decimais
+
+print("digite o saldo na sua conta:")
+saldo = float(input())
+print("digite o valor da compra que vc quer fazer aff")
+compra = float(input())
+
+restante = saldo - compra
+
+if restante >= 0:
+    print("após a compra você vai ter", '%.2f' %restante, "reais na sua conta")
+else:
+    restante = restante * -1
+    print("após a compra você vai estar devendo", '%.2f' %restante, "reais na sua conta")
+
+#Sabe como a nota da redação do ENEM é calculada?
+# Dois corretores dão notas de 0 a 200 para cada uma de 5 competências, totalizando 1000 pontos. Quando a diferença das notas está dentro de um certo limite, a nota final é a média das notas dos dois corretores.
+# Dadas as duas notas de dois corretores, calcule a nota final (com zero casas decimais)
+
+print("digite a nota do primeiro corretor:")
+nota1 = int(input())
+print("digite a nota do segundo corretor:")
+nota2 = int(input())
+
+notafinal = (nota1+nota2)//2
+
+print("sua nota final é:", notafinal)
+
